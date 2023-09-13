@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 side-image">
+      <div class="image">
+        <img src="assets/images/LOGO.png" alt="nema logo">
+      </div>
+    </div>
+    <div class="col-md-6 right align-items-center justify-content-center">
+      <form [formGroup]="newReg" (ngSubmit)="onSubmit()" *ngIf="newReg" class="fields-form">
+        <h1 class="align-self-center">Make a sell</h1>
+        <mat-form-field>
+          <mat-label>Item price</mat-label>
+          <input
+            formControlName="price"
+            matInput
+            name="price">
+          <mat-error *ngIf="newReg.get('name')?.hasError('required')">Name required!</mat-error>
+        </mat-form-field>
+        <button type="submit" mat-raised-button>Sell!</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+

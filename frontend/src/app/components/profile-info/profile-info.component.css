@@ -1,0 +1,120 @@
+.container-fluid{
+  background: #ececec;
+  padding: 0 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-card-left{
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
+  background: linear-gradient(to bottom right, #90caf9, #ce93d8);
+}
+
+.profile-card-right{
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
+  background: linear-gradient(to bottom left, #90caf9, #ce93d8);
+}
+
+.form-header{
+  height: 20%;
+  font-family: "Neon", sans-serif;
+  color: white;
+}
+
+.form-header h1{
+  font-size: 60px;
+}
+
+.profile-header h1{
+  font-size: 100px;
+  font-family: "Neon", sans-serif;
+  align-items: center;
+  color: #ce93d8;
+}
+
+.icon{
+  color: white;
+  margin-top: 6%;
+}
+
+.profile-form mat-form-field{
+  width: 400px;
+}
+
+.profile-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-details{
+  padding: 10px;
+  color: white;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  height: 60%;
+}
+
+.renew{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+  margin: 0;
+}
+
+.renew p{
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 7px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn{
+  background: #90caf9;
+}
+
+.center{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.space{
+  height: 20%;
+}
+
+a:hover{
+  color: white;
+}
+
+a{
+  color: white;
+}
+
+.password a{
+  font-family: "Poppins", sans-serif;
+}
+
+::ng-deep.mdc-menu-surface{
+  background-color:  white;
+}
+
+::ng-deep.mat-mdc-option .mdc-list-item__primary-text {
+  color:black;
+}
+
+::ng-deep.mat-mdc-option:hover:not(.mdc-list-item--disabled){
+  background: rgb(198, 179, 255);
+}

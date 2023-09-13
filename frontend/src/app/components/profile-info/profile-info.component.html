@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div class="row profile-header">
+    <h1>Profile</h1>
+  </div>
+
+  <div class="row cards">
+    <div class="col profile-card-left profile-form mr-5">
+      <div class="row form-header">
+        <h1>Personal details</h1>
+      </div>
+
+      <form [formGroup]="profileForm">
+        <div class="row name">
+          <mat-form-field>
+            <mat-label class="color">Name</mat-label>
+            <input formControlName="name"
+                   matInput
+                   name="name">
+            <mat-icon class="icon" matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-error *ngIf="profileForm.get('name')?.hasError('required')">Required field!</mat-error>
+            <mat-error *ngIf="profileForm.get('name')?.hasError('pattern')">Letters only!</mat-error>
+            <mat-error *ngIf="profileForm.get('name')?.hasError('maxlength')">Field should be between 1 and
+              25 characters!
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row email">
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input formControlName="email"
+                   matInput
+                   name="email">
+            <mat-icon class="icon" matSuffix>email</mat-icon>
+            <mat-error *ngIf="profileForm.get('email')?.hasError('required')">Required field!</mat-error>
+            <mat-error *ngIf="profileForm.get('email')?.hasError('email')">Not a valid email!</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="row renew">
+          <mat-checkbox formControlName="subscriptionEnabled" [color]=color [checked]="autoPay">
+            <p>Pay subscription plan automatically!</p>
+          </mat-checkbox>
+        </div>
+      </form>
+
+      <div class="row space">
+        <div class="col center">
+          <button [disabled]="!enableEdit"mat-mini-fab class="btn" (click)="toggleEditMode()">
+            <mat-icon class="icon">edit</mat-icon>
+          </button>
+        </div>
+        <div class="col center">
+          <button type="submit" [disabled]="!enableSave" mat-mini-fab class="btn" (click)="edit()">
+            <mat-icon class="icon">check</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="row password">
+        <a routerLink="/wrapper/changePassword">Click here to change your password.</a>
+      </div>
+    </div>
+
+    <div class="col profile-card-right profile-form">
+      <div class="row form-header">
+        <h1>Subscription details</h1>
+      </div>
+
+      <div class="row sub-details center">
+        <p>Subscription plan: {{plan}}</p>
+        <p>Expiration date: {{formattedExpDate}}</p>
+        <p>Current status: {{status}}</p>
+      </div>
+    </div>
+  </div>
+</div>

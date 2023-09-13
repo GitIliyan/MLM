@@ -1,0 +1,84 @@
+.container-fluid{
+  background: #1E242A;
+  background: -webkit-linear-gradient(to bottom, #000000, #232c31);
+  background: linear-gradient(to bottom, #000000, #232c31);
+  background-size: cover;
+  padding: 0;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  z-index: -2;
+}
+.hand {
+  background-position: left bottom;
+  background-image: url("src/assets/images/ruka cherna.png");
+  height: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -100%;
+  left: 30%;
+  display: flex;
+  animation: anim 2s forwards, anim2 3s forwards 3s;
+  align-items: end;
+  padding: 0;
+}
+.hand:after {
+  content: url("src/assets/images/ruka cvetna.png");
+  position: absolute;
+  width: 530px;
+  height: 625px;
+  left: 0;
+  z-index: -1;
+  align-items: end;
+  display: flex;
+  padding: 0;
+}
+
+@keyframes anim {
+  from {
+    bottom: -50%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes anim2 {
+  from{
+    left: 30%;
+    width: 530px;
+  }
+  to {
+    width: 0;
+    left: 50%;
+  }
+}
+
+.text{
+  animation: anim3 2s forwards 3s;
+  left: -110%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 150px;
+  color: white;
+  font-weight: 500;
+  line-height: 130px;
+}
+
+.custom{
+  font-family: 'CustomFont', sans-serif;
+  font-size: 115px;
+}
+
+@keyframes anim3 {
+  from{
+    left: -100%;
+  }
+  to{
+    left: 0;
+  }
+}

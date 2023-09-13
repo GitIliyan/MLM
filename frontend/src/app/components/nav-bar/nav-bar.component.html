@@ -1,0 +1,61 @@
+<div class="container-fluid navbar-container">
+  <div class="row align-items-center justify-content-between h-100">
+    <div class="col-auto">
+      <button class="home-btn" routerLink="/wrapper/home">
+        <i class="fa fa-home fa-lg" style="color: white;"></i>
+      </button>
+    </div>
+    <div class="col-auto">
+      <div class="row display-btn">
+        <button *ngIf="!isLogged()" mat-button class="nav-bar-btn" style="color: white" routerLink="/wrapper/login">Login</button>
+        <div *ngIf="isLogged()">
+          <button mat-button class="nav-bar-btn" style="color: white" routerLink="/wrapper/makeSell">Make sell</button>
+          <button mat-button class="nav-bar-btn" style="color: white" routerLink="/wrapper/register">Register</button>
+          <button mat-button class="nav-bar-btn" style="color: white" routerLink="/wrapper/profile">Profile</button>
+          <button mat-button class="nav-bar-btn" style="color: white" routerLink="/wrapper/income">Income</button>
+          <button mat-button (click)="fillWalletDrp()" [matMenuTriggerFor]="menu" class="nav-bar-btn" style="color: white">Wallet</button>
+          <button mat-button class="nav-bar-btn" style="color: white" routerLink="/wrapper/plans">Plans</button>
+          <button mat-button class="nav-bar-btn" style="color: white" routerLink="/wrapper/home" (click)="logout()">Logout</button>
+        </div>
+      </div>
+      <mat-menu class="mat-menu" #menu="matMenu">
+        <div class="col-auto">
+          <div class="row justify-content-center align-items-center dropdowns">
+            <div class="col-auto">
+              Balance: {{balance}}
+            </div>
+          </div>
+          <div class="row justify-content-between dropdowns">
+            <div class="col-auto">
+              <div class="col-auto">
+                Left: {{leftC}}
+              </div>
+              <div class="col-auto">
+                Right: {{rightC}}
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center dropdowns">
+            <div class="col-auto">
+              <button mat-menu-item (click)="deposit()" class="deposit">
+                <span>Deposit</span>
+              </button>
+            </div>
+          </div>
+          <div class="row justify-content-center dropdowns">
+            <div class="col-auto">
+              <button mat-menu-item (click)="withdraw()" class="withdraw">
+                <span>Withdraw</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-menu>
+    </div>
+  </div>
+  <div class="row">
+    <mat-progress-bar mode="determinate" class="nav-bar-line"></mat-progress-bar>
+  </div>
+</div>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,18 @@
+<div class="mat-dialog-container container-fluid">
+  <div class="col justify-content-center align-items-center container-col">
+    <form>
+      <div class="row justify-content-center input">
+        <input [(ngModel)]="money" name="money">
+      </div>
+      <div class="row justify-content-center buttons">
+        <button mat-raised-button class="btn-wdr" (click)="withdraw()" *ngIf="displayedButton === 1">
+          Withdraw
+        </button>
+        <button mat-raised-button class="btn-dep" (click)="deposit()"  *ngIf="displayedButton === 2">
+          Deposit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+

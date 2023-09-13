@@ -1,0 +1,14 @@
+.chart-text-row{
+  height: 100vh;
+  display: flex;
+  width: 100vw;
+  background: #ececec;
+}
+.left{
+  padding: 40px;
+}
+.right{
+  padding: 40px;
+  height: 500px;
+  width: 800px;
+}

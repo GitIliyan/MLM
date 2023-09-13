@@ -1,0 +1,72 @@
+.container-fluid{
+  background: #ececec;
+  padding: 0 20px 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.side-image{
+  background-image: url('/assets/images/login.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px 0 0 10px;
+}
+
+img{
+  top: 20px;
+  left: 10px;
+  position: relative;
+  width: 35px;
+}
+
+.row{
+  width: 900px;
+  height: 550px;
+  border-radius: 10px;
+  background: #232c31;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.5);
+}
+
+.login-header{
+  align-items: center;
+  color: #7f06cc;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+}
+
+.right{
+  width:50%;
+}
+
+.right mat-label{
+  font-family: "Poppins", sans-serif;
+}
+
+.right h1{
+  padding-bottom: 40px;
+  font-size: 80px;
+  font-family: "Neon", sans-serif;
+}
+
+.btn{
+  background: #7f06cc;
+  color: white;
+}
+
+.fields-form{
+  width:235px;
+}
+
+mat-form-field{
+  width:100%;
+}
